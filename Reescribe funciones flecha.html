@@ -1,0 +1,13 @@
+<!DOCTYPE html!>
+<script>
+    "use estrict";
+    function ask(quiestion, yes, no) {
+        if (confirm(quiestion)) yes();
+        else no ();
+    }
+    ask("Do you agree?",
+        () => alert("You agreed."),
+        () => alert("You canceled the execution.")
+    );
+
+</script>
