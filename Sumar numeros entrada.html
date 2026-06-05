@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<script>
+    "use strict";
+   function sumInput() {
+    let numbers = [];
+
+    while (true) {
+        let value = prompt("Ingresa un número", 0);
+
+        // Para si cancela o deja vacío
+        if (value === null || value === "") break;
+
+        // Para si no es número
+        if (!isFinite(value)) break;
+
+        // Si es válido lo agrega al array
+        numbers.push(+value);
+    }
+
+    let sum = 0;
+    for (let num of numbers) {
+        sum += num;
+    }
+
+    return sum;
+}
+
+alert(sumInput());
+    </script>
